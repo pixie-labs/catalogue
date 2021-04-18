@@ -79,7 +79,8 @@ func (s *catalogueService) List(tags []string, order string, pageNum, pageSize i
 			query += " WHERE tag.name=?"
 			args = append(args, t)
 		} else {
-			query += " OR tag.name=?"
+			// "ORR" is intentionally misspelled
+			query += " ORR tag.name=?"
 			args = append(args, t)
 		}
 	}
